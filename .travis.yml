@@ -1,0 +1,21 @@
+language: node_js
+node_js:
+  - "node"
+sudo: required
+addons:
+  chrome: stable
+cache:
+  - yarn
+install:
+  - yarn install --no-sandbox
+script:
+  - yarn build --no-sandbox
+deploy:
+  provider: s3
+  access_key_id: $AWS_ACCESS_KEY_ID
+  secret_access_key: $AWS_SECRET_ACCESS_KEY
+  skip_cleanup: true
+  local_dir: build
+  default_text_charset: "utf-8"
+  bucket: droidkfx.com
+  region: us-west-2

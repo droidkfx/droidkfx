@@ -1,0 +1,25 @@
+a:link, a:visited {
+  color: white;
+  text-align: center; 
+  padding-left: 3px;
+  padding-right: 3px;
+  text-decoration: underline;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: gray;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: darkgray;
+  font-family: sans-serif;
+}
+
+footer {
+  height: 50px;
+  text-align: center;
+}
