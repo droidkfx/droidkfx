@@ -9,6 +9,7 @@ cache:
 install:
   - yarn install --no-sandbox
 script:
+  - ./build_resources/pre_build.sh
   - yarn build --no-sandbox
 deploy:
   provider: s3
